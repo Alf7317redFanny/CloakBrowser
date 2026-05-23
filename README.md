@@ -29,7 +29,7 @@ pip install cloakbrowser
 Then install the browser binaries:
 
 ```bash
-playwrightinstall chromium
+playwright install chromium
 ```
 
 ## Quick Start
@@ -75,7 +75,9 @@ async def main():
 | `stealth` | `bool` | `True` | Enable stealth mode |
 | `proxy` | `ProxyConfig` | `None` | Proxy configuration |
 | `user_agent` | `str` | auto | Custom user agent string |
-| `timeout` | `int` | `30000` | Default navigation timeout (ms) |
+| `timeout` | `int` | `60000` | Default navigation timeout (ms) |
+
+> **Personal note:** Bumped the default `timeout` from 30000 to 60000 ms — 30s was too aggressive for slower sites I was scraping.
 
 ## Development
 
