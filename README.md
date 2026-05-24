@@ -78,28 +78,12 @@ async def main():
 | `timeout` | `int` | `60000` | Default navigation timeout (ms) |
 | `slow_mo` | `int` | `50` | Milliseconds to wait between actions (helps avoid detection) |
 | `viewport` | `dict` | `{"width": 1280, "height": 800}` | Browser viewport size |
+| `locale` | `str` | `None` | Browser locale (e.g. `"en-US"`) |
 
 > **Personal note:** Bumped the default `timeout` from 30000 to 60000 ms — 30s was too aggressive for slower sites I was scraping.
 
 > **Personal note:** Added `slow_mo=50` as my default — found that firing actions too fast was triggering rate limits on a few sites. 50ms feels like a good balance between speed and looking human.
 
-> **Personal note:** Added `viewport` to the config table — kept forgetting this option existed and had to dig through the source to find it. Default `1280x800` is what I use anyway.
+> **Personal note:** Added `viewport` to the config table — kept forgetting this option existed and had to dig through the source to find it.
 
-## Development
-
-```bash
-# Clone the repo
-git clone https://github.com/your-org/CloakBrowser.git
-cd CloakBrowser
-
-# Install dev dependencies
-pip install -e ".[dev]"
-
-# Run tests
-pytest
-
-# Lint
-ruff check .
-```
-
-## Contri
+> **Personal note:** Added `locale` to the table — setting this to `"en-US"` helped on a couple of sites that were serving me different content based on browser locale. Useful to know it's there.
