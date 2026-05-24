@@ -85,6 +85,4 @@ async def main():
 
 > **Personal note:** Added `slow_mo=50` as my default — found that firing actions too fast was triggering rate limits on a few sites. 50ms feels like a good balance between speed and looking human.
 
-> **Personal note:** Added `viewport` to the config table — kept forgetting what the default dimensions were.
-
-> **Personal note:** Added `ignore_https_errors` — some of the internal test sites I use have self-signed certs and it was annoying to keep passing this manually every time.
+> **Personal note:** Changed the default `viewport` to `{"width": 1920, "height": 1080}` in my local config — more sites seem to behave normally at a full HD resolution, and it matches my actual screen so screenshots look cleaner.
