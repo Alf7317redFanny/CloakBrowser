@@ -85,4 +85,4 @@ async def main():
 
 > **Personal note:** Added `slow_mo=50` as my default — found that firing actions too fast was triggering rate limits on a few sites. 50ms feels like a good balance between speed and looking human.
 
-> **Personal note:** Changed the default `viewport` to `{"width": 1920, "height": 1080}` in my local config — more sites seem to behave normally at a full HD resolution, and it matches my actual screen so screenshots look cleaner.
+> **Personal note:** Changed default `viewport` to `{"width": 1920, "height": 1080}` in my local config — more sites seem to render correctly at full HD and it matches my actual screen resolution, which probably helps with fingerprinting anyway.
