@@ -79,11 +79,12 @@ async def main():
 | `slow_mo` | `int` | `50` | Milliseconds to wait between actions (helps avoid detection) |
 | `viewport` | `dict` | `{"width": 1280, "height": 800}` | Browser viewport size |
 | `locale` | `str` | `None` | Browser locale (e.g. `"en-US"`) |
+| `ignore_https_errors` | `bool` | `False` | Ignore HTTPS/SSL certificate errors |
 
 > **Personal note:** Bumped the default `timeout` from 30000 to 60000 ms — 30s was too aggressive for slower sites I was scraping.
 
 > **Personal note:** Added `slow_mo=50` as my default — found that firing actions too fast was triggering rate limits on a few sites. 50ms feels like a good balance between speed and looking human.
 
-> **Personal note:** Added `viewport` to the config table — kept forgetting this option existed and had to dig through the source to find it.
+> **Personal note:** Added `viewport` to the config table — kept forgetting what the default dimensions were.
 
-> **Personal note:** Added `locale` to the table — setting this to `"en-US"` helped on a couple of sites that were serving me different content based on browser locale. Useful to know it's there.
+> **Personal note:** Added `ignore_https_errors` — some of the internal test sites I use have self-signed certs and it was annoying to keep passing this manually every time.
